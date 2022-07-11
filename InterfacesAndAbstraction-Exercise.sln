@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T.04BorderControl", "T.04Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07.MilitaryElite", "T07.MilitaryElite\T07.MilitaryElite.csproj", "{B1733A51-986A-4B79-BEDE-FF9DA4738C9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitInterfaces", "ExplicitInterfaces\ExplicitInterfaces.csproj", "{C1FC2BBE-FDAE-4D3F-BDED-A125136EA93C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B1733A51-986A-4B79-BEDE-FF9DA4738C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1733A51-986A-4B79-BEDE-FF9DA4738C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1733A51-986A-4B79-BEDE-FF9DA4738C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FC2BBE-FDAE-4D3F-BDED-A125136EA93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FC2BBE-FDAE-4D3F-BDED-A125136EA93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FC2BBE-FDAE-4D3F-BDED-A125136EA93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FC2BBE-FDAE-4D3F-BDED-A125136EA93C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
