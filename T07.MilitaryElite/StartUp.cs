@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MilitaryElite
 {
@@ -7,7 +8,7 @@ namespace MilitaryElite
     {
         static void Main(string[] args)
         {
-            var privates = new Dictionary<string, Private>();
+            var privates = new List<Private>();
             string input;
             while ((input = Console.ReadLine()) != "End")
             {
@@ -24,7 +25,7 @@ namespace MilitaryElite
                         salary = decimal.Parse(cmdArgs[4]);
 
                         var privateSoldier = new Private(id, firstName, lastName, salary);
-                        privates.Add(id, privateSoldier);
+                        privates.Add(privateSoldier);
                         Console.WriteLine(privateSoldier);
                         break;
                     case "LieutenantGeneral":
@@ -36,7 +37,7 @@ namespace MilitaryElite
                             for (var i = 5; i < cmdArgs.Length; i++)
                             {
                                 string privateId = cmdArgs[i];
-                                privateSoldier = privates[privateId];
+                                privateSoldier = privates.FirstOrDefault(p => p.Id == privateId);
 
                                 leutenantGeneral.AddPrivate(privateSoldier);
                             }
@@ -68,10 +69,12 @@ namespace MilitaryElite
                         Console.WriteLine(engineer);
                         break;
                     case "Commando":
-                        id = cmdArgs[1];
-                        firstName = cmdArgs[2];
-                        lastName = cmdArgs[3];
                         salary = decimal.Parse(cmdArgs[4]);
+
+                        if (cmdArgs[5].ToLower() != "airforces" && cmdArgs[5].ToLower() != "marines")
+                        {
+                            continue;
+                        }
 
                         var commando = new Commando(id, firstName, lastName, salary, cmdArgs[5]);
 
@@ -95,9 +98,6 @@ namespace MilitaryElite
 
                         break;
                     case "Spy":
-                        id = cmdArgs[1];
-                        firstName = cmdArgs[2];
-                        lastName = cmdArgs[3];
                         var codeNumber = int.Parse(cmdArgs[4]);
 
                         var spy = new Spy(id, firstName, lastName, codeNumber);

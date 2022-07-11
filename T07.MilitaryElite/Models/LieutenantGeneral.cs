@@ -15,7 +15,7 @@ namespace MilitaryElite
             this.privates = new List<Private>();
         }
 
-        public IReadOnlyCollection<Private> Privates => this.privates.AsReadOnly();
+        public IReadOnlyCollection<Private> Privates => this.privates;
 
         public void AddPrivate(Private privateSoldier)
         {
